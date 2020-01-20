@@ -2,7 +2,7 @@ import random
 from collections import Counter, OrderedDict
 from operator import itemgetter
 import re
-import pandas
+"""import pandas"""
 
 class Card():
     def __init__(self,name,category,cost,buypower,vpoints):
