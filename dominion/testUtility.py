@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
-@author: tfleck
+Created on 2020/1/19
+@author: Yujie Wang
 """
 
 import Dominion
@@ -17,6 +17,8 @@ if len(player_names)>2:
 else:
     nV=8
 nC = -10 + 10 * len(player_names)
+
+"""[cardname]"""
 
 box = testUtility.Getbox()
 def Getbox(nv)
