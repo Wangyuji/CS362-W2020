@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
-@author: tfleck
+Created on Tue 2020/1/19 20:24
+@author: Yujie Wang
 """
 
 import Dominion
