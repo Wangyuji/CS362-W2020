@@ -18,6 +18,8 @@ else:
     nV=8
 nC = -10 + 10 * len(player_names)
 
+box = testUtility.Getbox()
+def Getbox(nv)
 #Define box
 box = {}
 box["Woodcutter"]=[Dominion.Woodcutter()]*10
@@ -45,6 +47,7 @@ box["Militia"]=[Dominion.Militia()]*10
 box["Spy"]=[Dominion.Spy()]*10
 box["Thief"]=[Dominion.Thief()]*10
 box["Throne Room"]=[Dominion.Throne_Room()]*10
+retrun box
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
                 3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
