@@ -20,7 +20,7 @@ nC = -10 + 10 * len(player_names)
 
 #Define box
 box = {}
-box["Woodcutter"]=[Dominion.Woodcutter()]*10
+box["Woodcutter"]=[Dominion.Woodcutter()]*100
 box["Smithy"]=[Dominion.Smithy()]*10
 box["Laboratory"]=[Dominion.Laboratory()]*10
 box["Village"]=[Dominion.Village()]*10
@@ -43,7 +43,7 @@ box["Witch"]=[Dominion.Witch()]*10
 box["Bureaucrat"]=[Dominion.Bureaucrat()]*10
 box["Militia"]=[Dominion.Militia()]*10
 box["Spy"]=[Dominion.Spy()]*10
-box["Thief"]=[Dominion.Thief()]*10
+box["Thief"]=[Dominion.Thief()]*100
 box["Throne Room"]=[Dominion.Throne_Room()]*10
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
@@ -61,8 +61,8 @@ supply = defaultdict(list,[(k,box[k]) for k in random10])
 
 #The supply always has these cards
 supply["Copper"]=[Dominion.Copper()]*(60-len(player_names)*7)
-supply["Silver"]=[Dominion.Silver()]*40
-supply["Gold"]=[Dominion.Gold()]*30
+supply["Silver"]=[Dominion.Silver()]*100
+supply["Gold"]=[Dominion.Gold()]*100
 supply["Estate"]=[Dominion.Estate()]*nV
 supply["Duchy"]=[Dominion.Duchy()]*nV
 supply["Province"]=[Dominion.Province()]*nV
@@ -104,10 +104,10 @@ while not Dominion.gameover(supply):
 #Final score
 dcs=Dominion.cardsummaries(players)
 vp=dcs.loc['VICTORY POINTS']
-vpmax=vp.max()
+vpmin=vp.min()
 winners=[]
 for i in vp.index:
-    if vp.loc[i]==vpmax:
+    if vp.loc[i]==vpmin:
         winners.append(i)
 if len(winners)>1:
     winstring= ' and '.join(winners) + ' win!'
